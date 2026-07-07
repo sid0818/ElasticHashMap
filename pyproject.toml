@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elastihash"
+version = "0.1.0"
+description = "A hash table that beats the classical worst-case probe complexity bound without ever reordering elements — based on Farach-Colton, Krapivin & Kuszmaul (2025)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Sudipto Sarkar", email = "sudipto.sarkar0818@gmail.com" }
+]
+keywords = ["hash table", "data structures", "open addressing", "algorithms"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/elastihash"
+Repository = "https://github.com/yourusername/elastihash"
+Paper = "https://arxiv.org/abs/2501.02305"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: large-scale / stress tests, skipped by default -- run with `pytest -m slow --run-slow`",
+]
+
+[tool.setuptools.packages.find]
+include = ["elastihash*"]
+
+[tool.setuptools.package-data]
+elastihash = ["py.typed"]
