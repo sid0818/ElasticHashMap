@@ -4,18 +4,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](pyproject.toml)
-[![Tests](https://github.com/yourusername/elastihash/actions/workflows/tests.yml/badge.svg)](https://github.com/yourusername/elastihash/actions/workflows/tests.yml)
+[![Tests](https://github.com/sid0818/ElasticHashMap/actions/workflows/tests.yml/badge.svg)](https://github.com/sid0818/ElasticHashMap/actions/workflows/tests.yml)
 [![Paper](https://img.shields.io/badge/paper-arXiv%3A2501.02305-b31b1b.svg)](https://arxiv.org/abs/2501.02305)
 
-ElastiHash is a Python implementation of **elastic hashing** — an
-open-addressed hash table that achieves near-optimal search performance
-**without ever moving a key once it's been inserted**. No rehashing on
-resize, no reordering, no tombstones drifting around. Just a fixed array
-and a cleverer probing strategy.
-
-It's built on a genuinely new result in data structures theory, published
-in early 2025, that overturned assumptions which had stood since the
-1970s and 80s. See [Credits & Citation](#credits--citation) below.
+ElastiHash is a Python implementation of **elastic hashing**—a modern open-addressed hash table that delivers near-optimal search performance **without moving keys after insertion or rehashing**. Based on the 2025 paper *Optimal Bounds for Open Addressing Without Reordering*. See [Credits & Citation](#credits--citation) below.
 
 ---
 
@@ -72,7 +64,7 @@ Or, from source:
 
 ```bash
 git clone https://github.com/sid0818/ElasticHashMap.git
-cd elastihash
+cd ElasticHashMap
 pip install -e .
 ```
 
